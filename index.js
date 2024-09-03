@@ -2,7 +2,6 @@ import * as dotenv from "dotenv";
 import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import path from "path";
 import cors from "cors";
 import { StatusCodes } from "http-status-codes";
 
@@ -33,9 +32,12 @@ app.get("/api/:date_string", (req, res) => {
   if (!isNaN(date_string)) {
     time = new Date(date_string * 1000);
   }
-  res
-    .status(StatusCodes.OK)
-    .json({ unix: time.getTime(), utc: time.toUTCString() });
+  const utcTime = time.toUTCString();
+  if (utcTime !== "Invalid Date") {
+    res.status(StatusCodes.OK).json({ unix: time.getTime(), utc: utcTime });
+  } else {
+    res.status(StatusCodes.BAD_REQUEST).json({ error: "Invalid Date" });
+  }
 });
 
 const listener = app.listen(process.env.PORT || 3000, () => {
