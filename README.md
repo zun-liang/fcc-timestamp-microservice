@@ -6,7 +6,6 @@ This is a solution to the [Timestamp Microservice](https://www.freecodecamp.org/
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -21,20 +20,8 @@ This is a solution to the [Timestamp Microservice](https://www.freecodecamp.org/
 
 Users should be able to:
 
-### Screenshot
-
-<table>
-  <tr>
-    <td>
-      <img src="./public/screenshots/screenshot-mobile-default.png" alt="screenshot mobile default" style="height: 300px" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="./public/screenshots/screenshot-desktop-default.png" alt="screenshot desktop default" style="width: 300px" />
-    </td>
-  </tr>
-</table>
+- Get current time as Unix Timestamp and UTC time string
+- Transfer input time to Unix Timestamp and UTC time string
 
 ### Links
 
@@ -52,7 +39,11 @@ Users should be able to:
 
 ### What I learned
 
+- How to build simple api using Node.js and Express.js
+
 ### Helpful Resources
+
+- [Date.prototype.toUTCString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString)
 
 ## Author
 
