@@ -30,7 +30,7 @@ app.get("/api/:date_string", (req, res) => {
   const { date_string } = req.params;
   let time = new Date(date_string);
   if (!isNaN(date_string)) {
-    time = new Date(date_string * 1000);
+    time = new Date(Number(date_string));
     res
       .status(StatusCodes.OK)
       .json({ unix: Number(date_string), utc: time.toUTCString() });
