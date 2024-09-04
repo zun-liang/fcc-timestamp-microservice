@@ -10,8 +10,7 @@ This is a solution to the [Timestamp Microservice](https://www.freecodecamp.org/
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+  - [Helpful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
